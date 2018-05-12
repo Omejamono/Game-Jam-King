@@ -4,7 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Destroyer
+  - Shoot
+  - Obstacle
   - padre
+  - walls
   layers:
   - Default
   - TransparentFX
