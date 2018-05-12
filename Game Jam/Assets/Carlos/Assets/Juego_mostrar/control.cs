@@ -21,7 +21,6 @@ public class control : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
-        Debug.Log(pos);
         if (pos >= max.Length)
         {
             pos = 0;
