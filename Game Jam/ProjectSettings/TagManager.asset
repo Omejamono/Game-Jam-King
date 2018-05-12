@@ -11,6 +11,7 @@ TagManager:
   - walls
   - Happy
   - Sad
+  - GoodWords
   layers:
   - Default
   - TransparentFX

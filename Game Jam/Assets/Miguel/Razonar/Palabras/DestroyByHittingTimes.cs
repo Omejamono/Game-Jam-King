@@ -7,11 +7,18 @@ public class DestroyByHittingTimes : MonoBehaviour {
     public Vector3 inverseVelocity;
     public bool hitted = false;
     public float timeRA;
+    public GameObject death;
+    private GameObject goodWords;
 
     public float life; 
 
     private float stopRA;
 
+
+    private void Start()
+    {
+        goodWords = GameObject.FindGameObjectWithTag("GoodWords");
+    }
 
     private void Update()
     {
@@ -40,6 +47,9 @@ public class DestroyByHittingTimes : MonoBehaviour {
             if (life <= 0)
             {
                 Destroy(gameObject);
+
+                GameObject clone = Instantiate(death, transform.position, transform.rotation);
+                clone.transform.parent = goodWords.transform;
             }
         }
     }

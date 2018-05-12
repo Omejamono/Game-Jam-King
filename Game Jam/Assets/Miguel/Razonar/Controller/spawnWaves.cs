@@ -3,6 +3,7 @@ using System.Collections;
 
 public class spawnWaves : MonoBehaviour
 {
+    public Transform spawner;
     public GameObject palabras;
     public GameObject[] hazard;
     public Vector3 spawnValues;
@@ -11,6 +12,7 @@ public class spawnWaves : MonoBehaviour
     public float startWait;
     public float waveWait;
     private GameObject clone;
+    private int aux = 0; 
 
     void Start()
     {
@@ -24,9 +26,16 @@ public class spawnWaves : MonoBehaviour
         {
             for (int i = 0; i < hazardCount; i++)
             {
-                Vector3 spawnPosition = new Vector3(spawnValues.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
+                Vector3 spawnPosition = new Vector3(spawner.position.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
                 Quaternion spawnRotation = Quaternion.identity;
-                int random = Random.Range(0, 2);
+                int random = Random.Range(0, 3);
+
+                if (aux == 0 || aux == 1)
+                {
+                    random = Random.Range(0, 3);
+                }
+                aux = Random.Range(2, 2);
+
                 switch (random)
                 {
                     case 0:
@@ -38,7 +47,7 @@ public class spawnWaves : MonoBehaviour
                         clone.transform.parent = palabras.transform;
                         break;
                     case 2:
-                        random = Random.Range(0, 2);
+                        random = Random.Range(0, 3);
                         switch (random)
                         {
                             case 0:
