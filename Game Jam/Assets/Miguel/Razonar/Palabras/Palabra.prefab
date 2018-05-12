@@ -26,7 +26,7 @@ GameObject:
   - component: {fileID: 114131564928270746}
   - component: {fileID: 212168416732285944}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Palabra
   m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
