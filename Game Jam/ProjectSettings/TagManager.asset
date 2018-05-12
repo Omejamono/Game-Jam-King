@@ -9,6 +9,8 @@ TagManager:
   - Obstacle
   - padre
   - walls
+  - Happy
+  - Sad
   layers:
   - Default
   - TransparentFX
