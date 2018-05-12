@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 14
-  productGUID: 6ed7230d8f17ba0418bc847888388b74
+  productGUID: 4af94fdfb1a90104bbcdeb62a88b834f
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   defaultScreenOrientation: 4
@@ -633,8 +633,8 @@ PlayerSettings:
     UNet: 1
   facebookSdkVersion: 7.9.4
   apiCompatibilityLevel: 2
-  cloudProjectId: 9c59aa9a-a93c-4ced-9c97-f1a09d1df992
-  projectName: Game Jam
+  cloudProjectId: bd600cde-6004-487a-9f95-8490eff2e092
+  projectName: Game Jam (1)
   organizationId: omeja
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
