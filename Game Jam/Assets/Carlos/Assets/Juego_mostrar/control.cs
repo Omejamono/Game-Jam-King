@@ -8,7 +8,7 @@ public class control : MonoBehaviour {
     public GameObject[] min;
     public GameObject[] middle;
     public int pos;
- 
+
 
     //private variables
     private Vector3 aux;
@@ -16,25 +16,27 @@ public class control : MonoBehaviour {
     // Use this for initialization
     void Start () {
         aux = new Vector3(0.0f, 0.0f, 0.0f);
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (pos >= max.Length)
-        {
-            pos = 0;
-        }
-        float moveVertical = Input.GetAxis("Vertical");
-        float muestra = Mathf.Clamp(middle[pos].transform.position.y, -0.75f, 6.25f);
-        if ((aux.y + moveVertical * 0.3f) < 3 && (aux.y + moveVertical * 0.3f) > -5)
-        {
-            aux.y += moveVertical * 0.3f;
-        }
-        if (((transform.position.y > -5) || (moveVertical > 0)) && ((transform.position.y < 3) || (moveVertical < 0)))
-        {
-            transform.position = aux;
-        }
+
+            if (pos >= max.Length)
+            {
+                pos = 0;
+            }
+            float moveVertical = Input.GetAxis("Vertical");
+            if ((aux.y + moveVertical * 0.3f) < 2 && (aux.y + moveVertical * 0.3f) > -5)
+            {
+                aux.y += moveVertical * 0.3f;
+            }
+            if (((transform.position.y > -5) || (moveVertical > 0)) && ((transform.position.y < 2) || (moveVertical < 0)))
+            {
+                transform.position = new Vector3(transform.position.x, aux.y, transform.position.z);
+            }
+        
     }
 
 

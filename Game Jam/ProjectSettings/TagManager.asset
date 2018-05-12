@@ -4,12 +4,11 @@
 TagManager:
   serializedVersion: 2
   tags:
-<<<<<<< HEAD
+  - Destroyer
   - Shoot
   - Obstacle
-=======
   - padre
->>>>>>> 3d59bb0b4760d635b143863ec5caa37107a33b25
+  - walls
   layers:
   - Default
   - TransparentFX

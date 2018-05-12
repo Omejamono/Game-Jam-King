@@ -10,6 +10,7 @@ public class mover : MonoBehaviour {
     private Vector3 acceleration;
     private Vector3 vel;
     private float timer;
+    private bool go;
 
 	// Use this for initialization
 	void Start () {
@@ -17,22 +18,27 @@ public class mover : MonoBehaviour {
         acceleration = new Vector3(0.05f, 0, 0);
         vel = new Vector3(0.05f, 0, 0);
         timer = 0;
+
     }
 	
 	// Update is called once per frame
 	void Update () {
-        timer += Time.deltaTime;
-        if(timer >= 2)
-        {
-            first = false;
-            timer = 0;
-        }
+ 
+            timer += Time.deltaTime;
+            if (timer >= 2)
+            {
+                first = false;
+                timer = 0;
+            }
+
+            if (!first)
+            {
+                vel += acceleration;
+                first = true;
+            }
+            transform.position -= vel;
         
-        if (!first)
-        {
-            vel += acceleration;
-            first = true;
-        }
-        transform.position -= vel;
     }
+
+
 }
