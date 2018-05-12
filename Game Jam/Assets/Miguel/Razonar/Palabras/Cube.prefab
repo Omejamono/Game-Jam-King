@@ -87,7 +87,7 @@ MonoBehaviour:
   inverseVelocity: {x: 9, y: 0, z: 0}
   hitted: 0
   timeRA: 0.1
-  life: 3
+  life: 1
 --- !u!114 &114199743545684024
 MonoBehaviour:
   m_ObjectHideFlags: 1
