@@ -18,7 +18,6 @@ public class ScoreController : MonoBehaviour {
 	void Update () {
 
         //counting code
-        score = score + 1;
         setScore ();
     }
 
