@@ -3,12 +3,14 @@ using System.Collections;
 
 public class spawnWaves : MonoBehaviour
 {
+    public GameObject palabras;
     public GameObject[] hazard;
     public Vector3 spawnValues;
     public int hazardCount;
     public float spawnWait;
     public float startWait;
     public float waveWait;
+    private GameObject clone;
 
     void Start()
     {
@@ -28,23 +30,28 @@ public class spawnWaves : MonoBehaviour
                 switch (random)
                 {
                     case 0:
-                        Instantiate(hazard[0], spawnPosition, spawnRotation);
+                        clone = Instantiate(hazard[0], spawnPosition, spawnRotation);
+                        clone.transform.parent = palabras.transform;
                         break;
                     case 1:
-                        Instantiate(hazard[1], spawnPosition, spawnRotation);
+                        clone = Instantiate(hazard[1], spawnPosition, spawnRotation);
+                        clone.transform.parent = palabras.transform;
                         break;
                     case 2:
                         random = Random.Range(0, 2);
                         switch (random)
                         {
                             case 0:
-                                Instantiate(hazard[2], spawnPosition, spawnRotation);
+                                clone = Instantiate(hazard[2], spawnPosition, spawnRotation);
+                                clone.transform.parent = palabras.transform;
                                 break;
                             case 1:
-                                Instantiate(hazard[3], spawnPosition, spawnRotation);
+                                clone = Instantiate(hazard[3], spawnPosition, spawnRotation);
+                                clone.transform.parent = palabras.transform;
                                 break;
                             case 2:
-                                Instantiate(hazard[4], spawnPosition, spawnRotation);
+                                clone = Instantiate(hazard[2], spawnPosition, spawnRotation);
+                                clone.transform.parent = palabras.transform;
                                 break;      
                         }
                         break;
