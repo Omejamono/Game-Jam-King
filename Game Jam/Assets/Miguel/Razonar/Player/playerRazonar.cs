@@ -13,6 +13,7 @@ public class playerRazonar : MonoBehaviour {
     public float speed;
     public Boundary boundary;
 
+    public GameObject bullets; 
     public GameObject shot;
     public Transform shotSpawn;
     public float fireRate;
@@ -47,7 +48,8 @@ public class playerRazonar : MonoBehaviour {
         if (Input.GetButton("Jump") && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
-            Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+            GameObject clone = Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+            clone.transform.parent = bullets.transform;
         }
     }
 }
