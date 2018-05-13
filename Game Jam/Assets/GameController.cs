@@ -13,21 +13,23 @@ public class GameController : MonoBehaviour {
 
     public GameObject[] games;
     public GameObject[] info;
-    public GameObject[] caras; 
+    public GameObject[] caras;
+    public GameObject[] lifeSprite;
 
     private void Start()
     {
         nextPerson();
     }
-    /*
+    
     void Update () {
-		if (next)
+        lifeControl();
+        if (next)
         {
             nextPerson();
             next = false; 
         }
 	}
-    */
+
     void nextPerson()
     {
         earth.GetComponent<RotateEarth>().doRotate = true;
@@ -88,6 +90,33 @@ public class GameController : MonoBehaviour {
         for (int i = 0; i < caras.Length; i++)
         {
             caras[i].SetActive(false);
+        }
+    }
+
+    void lifeControl()
+    {
+        switch (life)
+        {
+            case 0:
+                lifeSprite[0].SetActive(false);
+                lifeSprite[1].SetActive(false);
+                lifeSprite[2].SetActive(false);
+                break;
+            case 1:
+                lifeSprite[0].SetActive(true);
+                lifeSprite[1].SetActive(false);
+                lifeSprite[2].SetActive(false);
+                break;
+            case 2:
+                lifeSprite[0].SetActive(true);
+                lifeSprite[1].SetActive(true);
+                lifeSprite[2].SetActive(false);
+                break;
+            default:
+                lifeSprite[0].SetActive(true);
+                lifeSprite[1].SetActive(true);
+                lifeSprite[2].SetActive(true);
+                break;
         }
     }
 }

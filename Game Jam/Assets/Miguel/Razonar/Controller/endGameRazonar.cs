@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class endGameRazonar : MonoBehaviour {
     public float timer;
-    public GameObject globalController;
+    private GameObject global;
     public GameObject game;
 
     private float timeelap;
 
     private void Start()
     {
+        global = GameObject.FindGameObjectWithTag("global");
         timeelap = timer + Time.time;
     }
 
@@ -20,6 +21,7 @@ public class endGameRazonar : MonoBehaviour {
         {
             //+1 Puntuaaciones 
             //Next Person 
+            global.GetComponent<GameController>().point += 50;
             Destroy(game);
         }
     }

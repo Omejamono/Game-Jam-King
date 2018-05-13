@@ -6,7 +6,13 @@ public class empatizarUser : MonoBehaviour {
     public int[] arrayFlechas;
     public GameObject[] flechas;
     public GameObject game; 
-    private int aux; 
+    private int aux;
+    private GameObject global;
+
+    private void Start()
+    {
+        global = GameObject.FindGameObjectWithTag("global");
+    }
 
     void Update () {
         arrayFlechas = GetComponent<empatizarController>().arrayFlechas;
@@ -23,6 +29,7 @@ public class empatizarUser : MonoBehaviour {
         {
             if (arrayFlechas[aux] == 1) {
                 flechas[arrayFlechas[aux]].SetActive(true);
+                global.GetComponent<GameController>().life--;
                 aux++;
             }else
             {
@@ -36,6 +43,7 @@ public class empatizarUser : MonoBehaviour {
             if (arrayFlechas[aux] == 2)
             {
                 flechas[arrayFlechas[aux]].SetActive(true);
+                global.GetComponent<GameController>().life--;
                 aux++;
             }
             else
@@ -50,6 +58,7 @@ public class empatizarUser : MonoBehaviour {
             if (arrayFlechas[aux] == 3)
             {
                 flechas[arrayFlechas[aux]].SetActive(true);
+                global.GetComponent<GameController>().life--;
                 aux++;
             }
             else
@@ -64,11 +73,13 @@ public class empatizarUser : MonoBehaviour {
             if (arrayFlechas[aux] == 0)
             {
                 flechas[arrayFlechas[aux]].SetActive(true);
+                global.GetComponent<GameController>().life--;
                 aux++;
             }
             else
             {
                 Destroy(game);
+                global.GetComponent<GameController>().life--;
             }
         }
 	}

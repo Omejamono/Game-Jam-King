@@ -12,6 +12,7 @@ TagManager:
   - Happy
   - Sad
   - GoodWords
+  - global
   layers:
   - Default
   - TransparentFX
