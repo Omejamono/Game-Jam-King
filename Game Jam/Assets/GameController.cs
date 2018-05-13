@@ -11,6 +11,7 @@ public class GameController : MonoBehaviour {
     public bool next = false;
     private int personType = 0;
 
+
     public GameObject[] faces;
 
     public GameObject earth;
@@ -30,6 +31,7 @@ public class GameController : MonoBehaviour {
     private void Start()
     {
         nextPerson();
+
     }
     
     void Update () {

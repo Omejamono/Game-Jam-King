@@ -7,16 +7,19 @@ public class ScoreController : MonoBehaviour {
 
     public Text scoreText;
     private int score;
+    private GameObject glogal;
 
     // Use this for initialization
     void Start () {
         score = 0;
         setScore ();
-	}
+        glogal = GameObject.FindGameObjectWithTag("global");
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
-
+       score =  glogal.GetComponent<GameController>().point;
         //counting code
         setScore ();
     }

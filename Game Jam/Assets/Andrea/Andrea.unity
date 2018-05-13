@@ -2602,6 +2602,11 @@ Prefab:
       propertyPath: info.Array.data[7]
       value: 
       objectReference: {fileID: 995527510}
+    - target: {fileID: 114157039680346506, guid: 0439def9dc8285e41b0bc1972752659e,
+        type: 2}
+      propertyPath: score
+      value: 
+      objectReference: {fileID: 1590256943}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0439def9dc8285e41b0bc1972752659e, type: 2}
   m_IsPrefabParent: 0
@@ -4846,14 +4851,14 @@ RectTransform:
   m_GameObject: {fileID: 1590256943}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -65.600006}
-  m_LocalScale: {x: 0.41555, y: 0.41555, z: 0.41555}
+  m_LocalScale: {x: 0.7045846, y: 0.70458466, z: 0.70458466}
   m_Children: []
   m_Father: {fileID: 1972756704}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -97.6, y: -75}
+  m_AnchoredPosition: {x: -88.8, y: -120.2}
   m_SizeDelta: {x: 100, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1590256945
