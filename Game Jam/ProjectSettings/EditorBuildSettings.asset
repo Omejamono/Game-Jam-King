@@ -4,4 +4,13 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Andrea/Andrea.unity
+    guid: f29210d78311bf6408ac0a37187b7f5e
+  - enabled: 1
+    path: Assets/Lose+.unity
+    guid: ccc5138f2f4a5524e87bf7ea2fa35adb
+  - enabled: 1
+    path: Assets/Menu.unity
+    guid: 2e50332a96672f2438f498c3454f9663

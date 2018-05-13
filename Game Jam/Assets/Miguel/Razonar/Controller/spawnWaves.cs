@@ -26,7 +26,7 @@ public class spawnWaves : MonoBehaviour
         {
             for (int i = 0; i < hazardCount; i++)
             {
-                Vector3 spawnPosition = new Vector3(spawner.position.x, Random.Range(-spawnValues.y, spawnValues.y), spawnValues.z);
+                Vector3 spawnPosition = new Vector3(spawner.position.x, Random.Range(-spawnValues.y, spawnValues.y), spawner.position.z);
                 Quaternion spawnRotation = Quaternion.identity;
                 int random = Random.Range(0, 3);
 

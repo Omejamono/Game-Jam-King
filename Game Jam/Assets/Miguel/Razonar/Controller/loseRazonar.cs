@@ -17,6 +17,7 @@ public class loseRazonar : MonoBehaviour {
         if (other.tag == tag)
         {
             global.GetComponent<GameController>().life--;
+            global.GetComponent<GameController>().heatFail();
             Destroy(game);
         }
     }

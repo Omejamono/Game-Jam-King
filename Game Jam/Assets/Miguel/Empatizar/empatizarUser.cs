@@ -29,11 +29,12 @@ public class empatizarUser : MonoBehaviour {
         {
             if (arrayFlechas[aux] == 1) {
                 flechas[arrayFlechas[aux]].SetActive(true);
-                global.GetComponent<GameController>().life--;
                 aux++;
             }else
             {
                 Destroy(game);
+                global.GetComponent<GameController>().life--;
+                global.GetComponent<GameController>().heatFail();
             }
         }
 
@@ -43,12 +44,13 @@ public class empatizarUser : MonoBehaviour {
             if (arrayFlechas[aux] == 2)
             {
                 flechas[arrayFlechas[aux]].SetActive(true);
-                global.GetComponent<GameController>().life--;
                 aux++;
             }
             else
             {
                 Destroy(game);
+                global.GetComponent<GameController>().life--;
+                global.GetComponent<GameController>().heatFail();
             }
         }
    
@@ -58,12 +60,13 @@ public class empatizarUser : MonoBehaviour {
             if (arrayFlechas[aux] == 3)
             {
                 flechas[arrayFlechas[aux]].SetActive(true);
-                global.GetComponent<GameController>().life--;
                 aux++;
             }
             else
             {
                 Destroy(game);
+                global.GetComponent<GameController>().life--;
+                global.GetComponent<GameController>().heatFail();
             }
         }
  
@@ -73,13 +76,13 @@ public class empatizarUser : MonoBehaviour {
             if (arrayFlechas[aux] == 0)
             {
                 flechas[arrayFlechas[aux]].SetActive(true);
-                global.GetComponent<GameController>().life--;
                 aux++;
             }
             else
             {
                 Destroy(game);
                 global.GetComponent<GameController>().life--;
+                global.GetComponent<GameController>().heatFail();
             }
         }
 	}

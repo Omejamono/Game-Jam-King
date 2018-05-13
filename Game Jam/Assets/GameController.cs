@@ -1,20 +1,31 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
+
 using UnityEngine;
 
 public class GameController : MonoBehaviour {
     public int life;
     public int point = 0;
     public string message = "default message";
-    public bool next = false; 
+    public bool next = false;
+    private int personType = 0;
+
+    public GameObject[] faces;
 
     public GameObject earth;
     public GameObject buttons;
+
+    public Transform gamesSpawner; 
 
     public GameObject[] games;
     public GameObject[] info;
     public GameObject[] caras;
     public GameObject[] lifeSprite;
+
+    public GameObject[] mensaje; 
+
+    public GameObject[] heat; 
 
     private void Start()
     {
@@ -34,6 +45,7 @@ public class GameController : MonoBehaviour {
     {
         earth.GetComponent<RotateEarth>().doRotate = true;
         buttons.SetActive(true);
+        randomPerson();
     }
 
     void randomPerson()
@@ -42,13 +54,16 @@ public class GameController : MonoBehaviour {
         switch (random)
         {
             case 0:
-                
+                faces[0].SetActive(true);
                 break;
             case 1:
+                faces[1].SetActive(true);
                 break;
-            case 2: 
+            case 2:
+                faces[2].SetActive(true);
                 break;
             case 3:
+                faces[3].SetActive(true);
                 break;
         }
     }
@@ -57,6 +72,8 @@ public class GameController : MonoBehaviour {
     {
         buttons.SetActive(false);
         info[0].SetActive(true);
+        GameObject clone = Instantiate(games[0], gamesSpawner.position, gamesSpawner.rotation);
+        clone.transform.parent = gamesSpawner.transform;
         games[0].SetActive(true);
         disableFaces();
     }
@@ -65,7 +82,8 @@ public class GameController : MonoBehaviour {
     {
         buttons.SetActive(false);
         info[1].SetActive(true);
-        games[1].SetActive(true);
+        GameObject clone = Instantiate(games[1], gamesSpawner.position, gamesSpawner.rotation);
+        clone.transform.parent = gamesSpawner.transform;
         disableFaces();
     }
 
@@ -73,7 +91,8 @@ public class GameController : MonoBehaviour {
     {
         buttons.SetActive(false);
         info[2].SetActive(true);
-        games[2].SetActive(true);
+        GameObject clone = Instantiate(games[2], gamesSpawner.position, gamesSpawner.rotation);
+        clone.transform.parent = gamesSpawner.transform;
         disableFaces();
     }
 
@@ -81,7 +100,8 @@ public class GameController : MonoBehaviour {
     {
         buttons.SetActive(false);
         info[3].SetActive(true);
-        games[3].SetActive(true);
+        GameObject clone = Instantiate(games[3], gamesSpawner.position, gamesSpawner.rotation);
+        clone.transform.parent = gamesSpawner.transform;
         disableFaces();
     }
 
@@ -101,6 +121,7 @@ public class GameController : MonoBehaviour {
                 lifeSprite[0].SetActive(false);
                 lifeSprite[1].SetActive(false);
                 lifeSprite[2].SetActive(false);
+                SceneManager.LoadSceneAsync(1);
                 break;
             case 1:
                 lifeSprite[0].SetActive(true);
@@ -118,5 +139,17 @@ public class GameController : MonoBehaviour {
                 lifeSprite[2].SetActive(true);
                 break;
         }
+    }
+
+    public void heatCorret()
+    {
+        heat[0].SetActive(true);
+        mensaje[0].SetActive(true);
+    }
+
+    public void heatFail()
+    {
+        heat[1].SetActive(true);
+        mensaje[1].SetActive(true);
     }
 }

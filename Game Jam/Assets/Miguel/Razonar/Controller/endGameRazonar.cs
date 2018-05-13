@@ -22,6 +22,7 @@ public class endGameRazonar : MonoBehaviour {
             //+1 Puntuaaciones 
             //Next Person 
             global.GetComponent<GameController>().point += 50;
+            global.GetComponent<GameController>().heatCorret();
             Destroy(game);
         }
     }

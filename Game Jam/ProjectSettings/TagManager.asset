@@ -4,15 +4,17 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Destroyer
-  - Shoot
-  - Obstacle
-  - padre
   - walls
+  - padre
+  - middle
+  - Destroyer
+  - GoodWords
+  - Obstacle
+  - Shoot
   - Happy
   - Sad
-  - GoodWords
   - global
+  - end
   layers:
   - Default
   - TransparentFX
@@ -22,8 +24,8 @@ TagManager:
   - UI
   - 
   - 
-  - Cara
-  - Camara
+  - 
+  - 
   - 
   - 
   - 
