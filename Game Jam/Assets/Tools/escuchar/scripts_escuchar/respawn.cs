@@ -35,7 +35,7 @@ public class respawn : MonoBehaviour {
             {
                 Vector3 spawnPosition = new Vector3(Random.Range(father.transform.position.x - 9, father.transform.position.x + 7), father.transform.position.y + 5, father.transform.position.z);
                 Quaternion spawnRotation = Quaternion.identity;
-                int random = Random.Range(0, 2);
+                int random = Random.Range(0, 4);
                 switch (random)
                 {
                     case 0:
@@ -43,6 +43,14 @@ public class respawn : MonoBehaviour {
                         clone.transform.parent = father.transform;
                         break;
                     case 1:
+                        clone = Instantiate(hazard[1], spawnPosition, spawnRotation);
+                        clone.transform.parent = father.transform;
+                        break;
+                    case 2:
+                        clone = Instantiate(hazard[1], spawnPosition, spawnRotation);
+                        clone.transform.parent = father.transform;
+                        break;
+                    case 3:
                         clone = Instantiate(hazard[1], spawnPosition, spawnRotation);
                         clone.transform.parent = father.transform;
                         break;

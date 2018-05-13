@@ -6,7 +6,13 @@ public class empatizarUser : MonoBehaviour {
     public int[] arrayFlechas;
     public GameObject[] flechas;
     public GameObject game; 
-    private int aux; 
+    private int aux;
+    private GameObject global;
+
+    private void Start()
+    {
+        global = GameObject.FindGameObjectWithTag("global");
+    }
 
     void Update () {
         arrayFlechas = GetComponent<empatizarController>().arrayFlechas;
@@ -27,6 +33,8 @@ public class empatizarUser : MonoBehaviour {
             }else
             {
                 Destroy(game);
+                global.GetComponent<GameController>().life--;
+                global.GetComponent<GameController>().heatFail();
             }
         }
 
@@ -41,6 +49,8 @@ public class empatizarUser : MonoBehaviour {
             else
             {
                 Destroy(game);
+                global.GetComponent<GameController>().life--;
+                global.GetComponent<GameController>().heatFail();
             }
         }
    
@@ -55,6 +65,8 @@ public class empatizarUser : MonoBehaviour {
             else
             {
                 Destroy(game);
+                global.GetComponent<GameController>().life--;
+                global.GetComponent<GameController>().heatFail();
             }
         }
  
@@ -69,6 +81,8 @@ public class empatizarUser : MonoBehaviour {
             else
             {
                 Destroy(game);
+                global.GetComponent<GameController>().life--;
+                global.GetComponent<GameController>().heatFail();
             }
         }
 	}

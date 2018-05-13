@@ -9,6 +9,7 @@ public class empatizarController : MonoBehaviour {
     public GameObject[] flechas;
     public GameObject game;
     public GameObject Heart;
+    private GameObject global; 
 
     private int aux = 0;
 
@@ -23,6 +24,7 @@ public class empatizarController : MonoBehaviour {
     {
         fillArray();
         timer = nextFlecha + Time.time;
+        global = GameObject.FindGameObjectWithTag("global");
     }
 
     private void Update()
@@ -77,6 +79,8 @@ public class empatizarController : MonoBehaviour {
         if (numCombi == 0)
         {
             Destroy(game);
+            global.GetComponent<GameController>().point++;
+            global.GetComponent<GameController>().heatCorret();
         }
         aux = 0;
         numFlechas++;

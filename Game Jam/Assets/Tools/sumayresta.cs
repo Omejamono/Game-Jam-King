@@ -12,10 +12,13 @@ public class sumayresta : MonoBehaviour {
     private int way;
     private float timer;
 
+    private GameObject global;
+
 	// Use this for initialization
 	void Start () {
         way = 5;
         timer = 0;
+        global = GameObject.FindGameObjectWithTag("global");
 	}
 	
 	// Update is called once per frame
@@ -25,6 +28,33 @@ public class sumayresta : MonoBehaviour {
         if(timer > 30)
         {
             Destroy(mastergame);
+
+            int points = 0;
+
+            switch (way)
+            {
+                case 5:
+                    points = 10;
+                    break;
+                case 6:
+                    points = 20; 
+                    break;
+                case 7:
+                    points = 30;
+                    break;
+                case 8:
+                    points = 40;
+                    break;
+                case 9:
+                    points = 50; 
+                    break;
+                default:
+                    global.GetComponent<GameController>().life --;
+                    global.GetComponent<GameController>().heatFail();
+                    break;
+            }
+            global.GetComponent<GameController>().point += points;
+            global.GetComponent<GameController>().heatCorret();
         }
 	}
 
