@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class destroy : MonoBehaviour {
-    public string tag;
+    public string tago;
     public GameObject juego;
     // Use this for initialization
     void Start () {
@@ -17,7 +17,7 @@ public class destroy : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.tag == tag)
+        if (collision.gameObject.tag == tago)
         {
             Destroy(juego);
         }

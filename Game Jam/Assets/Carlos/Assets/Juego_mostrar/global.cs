@@ -20,11 +20,7 @@ public class global : MonoBehaviour {
 	}
 
     public void OnTriggerExit(Collider other)
-    {
-        if(other.tag == "Player")
-        {
-            padre.GetComponent<control>().pos++;
-        }
+    { 
     }
 
 }
