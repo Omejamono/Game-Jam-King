@@ -18,7 +18,7 @@ public class resetGame : MonoBehaviour {
     void Update () {
         if (timer < Time.time)
         {
-            SceneManager.LoadSceneAsync(2);
+            SceneManager.LoadSceneAsync(0);
         }
     }
 }

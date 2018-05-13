@@ -54,7 +54,10 @@ public class sumayresta : MonoBehaviour {
                     break;
             }
             global.GetComponent<GameController>().point += points;
-            global.GetComponent<GameController>().heatCorret();
+            if (points > 0)
+            {
+                global.GetComponent<GameController>().heatCorret();
+            }
         }
 	}
 

@@ -18,7 +18,7 @@ public class menuprincipal : MonoBehaviour {
 
     public void jugar()
     {
-        SceneManager.LoadSceneAsync(0);
+        SceneManager.LoadSceneAsync(1);
     }
 
     public void salir()

@@ -123,7 +123,7 @@ public class GameController : MonoBehaviour {
                 lifeSprite[0].SetActive(false);
                 lifeSprite[1].SetActive(false);
                 lifeSprite[2].SetActive(false);
-                SceneManager.LoadSceneAsync(1);
+                SceneManager.LoadSceneAsync(2);
                 break;
             case 1:
                 lifeSprite[0].SetActive(true);

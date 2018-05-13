@@ -79,7 +79,7 @@ public class empatizarController : MonoBehaviour {
         if (numCombi == 0)
         {
             Destroy(game);
-            global.GetComponent<GameController>().point++;
+            global.GetComponent<GameController>().point += 50;
             global.GetComponent<GameController>().heatCorret();
         }
         aux = 0;
